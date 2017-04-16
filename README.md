@@ -1,2 +1,2 @@
 # 2guiris_eduardo
-Sitio web de Eduardo Kusnir
+Sitio web del compositor Eduardo Kusnir
