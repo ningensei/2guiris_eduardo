@@ -22,7 +22,8 @@ class MY_Controller extends CI_Controller {
 		$this->data['breadcrumbs'] = array();
 		$this->data['referer'] = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : site_url();
 
-		
+		$this->load->library('user_agent');
+		$this->data['mobile'] = $this->agent->is_mobile() ? true : false;
 		
 		
 	}
