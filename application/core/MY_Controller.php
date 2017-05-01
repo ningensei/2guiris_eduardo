@@ -19,7 +19,8 @@ class MY_Controller extends CI_Controller {
 		$this->setup();
 
 		
-		$this->data['breadcrumbs'] = array();
+		$this->breadcrumbs = array(['name' => 'Inicio', 'url' => site_url()]);
+		
 		$this->data['referer'] = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : site_url();
 
 		$this->load->library('user_agent');

@@ -2,6 +2,24 @@
 // ------------------------------------------------------------------------
 
 
+function renderBreadcrumbs($breadcrumbs) {
+	$res = '<div class="breadcrumbs">';
+	foreach($breadcrumbs as $key => $bread) {
+		if($bread['url']){
+			$res .= '<a href="'.$bread['url'].'">';
+			$res .= '<span>'.$bread['name'].'</span></a>';
+		} else {
+			$res .= '<span class="active">'.$bread['name'].'</span>';
+		}
+		
+		if($key < count($breadcrumbs) - 1) {
+			$res .= ' <i class="fa fa-arrow-right" aria-hidden="true"></i>
+ ';
+		}
+	}
+	$res .= '</div>';
+	return $res;
+}
 function httpGet($url) {
 
     $ch = curl_init();

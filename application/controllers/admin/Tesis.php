@@ -21,6 +21,10 @@ class Tesis extends AdminController{
 
     public function index()
     {
+        if(!$this->model->exists()) {
+            $this->model->initialize();
+        }
+        
         redirect(site_url('admin/tesis/edit/1'));
     }
 

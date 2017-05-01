@@ -56,6 +56,14 @@
 		box-sizing: border-box;
 	}
 
+/* Some bootstrap classes */
+@media(min-width: 767px) {
+	.visible-xs { display: none; }
+}
+@media(max-width: 767px) {
+	.hidden-xs { display: none; }
+}
+
 /* Containers */
 
 	.container {
@@ -1815,7 +1823,8 @@
 
 	#header {
 		position: relative;
-		padding: 4.35em 0em 4em 0em;
+		padding: 27px 0;
+		/*padding: 4.35em 0em 4em 0em;*/
 		background: #FFF;
 	}
 
@@ -1824,9 +1833,13 @@
 		}
 
 /* Logo */
+	
+	#logo-mobile {
+		text-align: center;
+	}
 
 	#logo {
-		position: absolute;
+		/*position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
@@ -1834,45 +1847,64 @@
 		height: 3em;
 		line-height: 3em;
 		margin-top:-5%;
-		
+		*/
+		width: 23%;
+		display: inline-block;
+	}
+	#logo img {
+		max-width: 100%;
+		padding: 0 7px;
 	}
 
 		#logo a {
-			border: 0;
+	/*		border: 0;
 			color: #4676AA;
 			font-size: 2.5em;
 			background: #fff;
 			padding: 0 0.5em 0 0.5em;
-			outline: 0;
+			outline: 0;*/
 		}
 
 /* Nav */
+	
+	.desktopNav-container * { vertical-align: middle; }
 
-	#nav {
+	#nav1 > ul { text-align: right; }
+	#nav2 > ul { text-align: left; }
+	#nav, #nav1, #nav2 {
+		display: inline-block;
 		text-align: center;
 		top: 2em;
 		left: 0;
-		width: 100%;
+		width: 38%;
 		margin: 0em auto;
 		box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1), 0px -1px 0px rgba(0, 0, 0, 0.1);
 	}
 
-		#nav > ul {
+		#nav > ul,
+		#nav1 > ul,
+		#nav2 > ul {
 			margin: 0;
 			width: 100%;
 		}
 
-			#nav > ul > li {
+			#nav > ul > li,
+			#nav1 > ul > li,
+			#nav2 > ul > li {
 				position: relative;
 				display: inline-block;
 				z-index: 2;
 			}
 
-				#nav > ul > li > ul {
+				#nav > ul > li > ul,
+				#nav1 > ul > li > ul,
+				#nav2 > ul > li > ul {
 					display: none;
 				}
 
-				#nav > ul > li > span, #nav > ul > li > a {
+				#nav > ul > li > span, #nav > ul > li > a, 
+				#nav1 > ul > li > span, #nav1 > ul > li > a, 
+				#nav2 > ul > li > span, #nav2 > ul > li > a {
 					color: #828d8c;
 					text-decoration: none;
 					outline: 0;
@@ -1886,15 +1918,21 @@
 					font-weight: 300;
 				}
 
-				#nav > ul > li.active > span, #nav > ul > li.active > a {
+				#nav > ul > li.active > span, #nav > ul > li.active > a,
+				#nav1 > ul > li.active > span, #nav1 > ul > li.active > a,
+				#nav2 > ul > li.active > span, #nav2 > ul > li.active > a {
 					background: #F3F3F3;
 				}
 
-				#nav > ul > li:first-child {
+				#nav > ul > li:first-child,
+				#nav1 > ul > li:first-child,
+				#nav2 > ul > li:first-child {
 					margin-left: 0;
 				}
 
-				#nav > ul > li.break {
+				#nav > ul > li.break,
+				#nav1 > ul > li.break,
+				#nav2 > ul > li.break {
 
 					/*
 						Use this to adjust the logo gap in the menu. You'll also
@@ -1904,11 +1942,15 @@
 					margin-left: 20em;
 				}
 
-					#nav > ul > li.break a {
+					#nav > ul > li.break a,
+					#nav1 > ul > li.break a,
+					#nav2 > ul > li.break a {
 						margin-left: -2em !important;
 					}
 
-				#nav > ul > li.pad a {
+				#nav > ul > li.pad a,
+				#nav1 > ul > li.pad a,
+				#nav2 > ul > li.pad a {
 					margin-right: 2em;
 					padding-right: 3em !important;
 				}
@@ -2074,7 +2116,7 @@
 	}
 
 	.homepage #main {
-		padding: 4em 0em;
+		padding: 10px 0;
 		text-align: center;
 	}
 
@@ -2857,7 +2899,8 @@
 			}
 
 			#header {
-				padding: 40px 0em !important;
+				padding: 8px 0;
+				/*padding: 40px 0em !important;*/
 			}
 
 		/* Nav */

@@ -21,6 +21,10 @@ class Contacto extends AdminController{
 
     public function index()
     {
+        if(!$this->model->exists()) {
+            $this->model->initialize();
+        }
+        
         redirect(site_url('admin/contacto/edit/1'));
     }
 

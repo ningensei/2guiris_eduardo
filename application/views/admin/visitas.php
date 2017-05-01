@@ -85,7 +85,7 @@
                     <div class="visual blue">
                         <i class="icon-user"></i>
                     </div>
-                    <div class="title">Total de visitas al catálogo</div>
+                    <div class="title">Total de visitas a la sección catálogo</div>
                     <div class="value">
                         <?=$total_catalogo;?>
                     </div>
@@ -99,7 +99,7 @@
                     <div class="visual cyan">
                         <i class="icon-user"></i>
                     </div>
-                    <div class="title">Total de visitas a la biografía</div>
+                    <div class="title">Total de visitas a la sección biografía</div>
                     <div class="value">
                         <?=$total_biografia;?>
                     </div>
@@ -107,13 +107,15 @@
                 </div>
             </div> <!-- /.smallstat -->
         </div>
+    </div>
+    <div class="row">
         <div class="col-sm-6 col-md-3">
             <div class="statbox widget box box-shadow">
                 <div class="widget-content">
                     <div class="visual yellow">
                         <i class="icon-user"></i>
                     </div>
-                    <div class="title">Total de visitas a novedades</div>
+                    <div class="title">Total de visitas a la sección novedades</div>
                     <div class="value">
                         <?=$total_novedades;?>
                     </div>
