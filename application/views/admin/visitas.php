@@ -52,7 +52,21 @@
 
     <div class="row">
         <div class="col-sm-6 col-md-3">
-            <div class="statbox widget box box-shadow">
+            <div style="outline: 2px solid orange!important;" class="statbox widget box box-shadow">
+                <div class="widget-content">
+                    <div class="visual blue">
+                        <i class="icon-user"></i>
+                    </div>
+                    <div class="title">Total de sesiones únicas por usuario</div>
+                    <div class="value">
+                        <?=$total_sesiones;?>
+                    </div>
+                    <a class="more" href="http://escueladenegocios.coca-cola.com/admin/stats_usuarios">Ver Más <i class="pull-right icon-angle-right"></i></a>
+                </div>
+            </div> <!-- /.smallstat -->
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <div style="outline: 2px solid orange!important;" class="statbox widget box box-shadow">
                 <div class="widget-content">
                     <div class="visual red">
                         <i class="icon-user"></i>
@@ -69,7 +83,7 @@
             <div class="statbox widget box box-shadow">
                 <div class="widget-content">
                     <div class="visual purple">
-                        <i class="icon-user"></i>
+                        <i style="font-size: 20px;" class="fa fa-home" aria-hidden="true"></i>
                     </div>
                     <div class="title">Total de visitas a la Página Principal</div>
                     <div class="value">
@@ -82,22 +96,8 @@
         <div class="col-sm-6 col-md-3">
             <div class="statbox widget box box-shadow">
                 <div class="widget-content">
-                    <div class="visual blue">
-                        <i class="icon-user"></i>
-                    </div>
-                    <div class="title">Total de visitas a la sección catálogo</div>
-                    <div class="value">
-                        <?=$total_catalogo;?>
-                    </div>
-                    <a class="more" href="http://escueladenegocios.coca-cola.com/admin/stats_usuarios">Ver Más <i class="pull-right icon-angle-right"></i></a>
-                </div>
-            </div> <!-- /.smallstat -->
-        </div>
-        <div class="col-sm-6 col-md-3">
-            <div class="statbox widget box box-shadow">
-                <div class="widget-content">
                     <div class="visual cyan">
-                        <i class="icon-user"></i>
+                        <i style="font-size: 20px;" class="fa fa-book" aria-hidden="true"></i>
                     </div>
                     <div class="title">Total de visitas a la sección biografía</div>
                     <div class="value">
@@ -113,7 +113,7 @@
             <div class="statbox widget box box-shadow">
                 <div class="widget-content">
                     <div class="visual yellow">
-                        <i class="icon-user"></i>
+                        <i style="font-size: 20px;" class="fa fa-file-text-o" aria-hidden="true"></i>
                     </div>
                     <div class="title">Total de visitas a la sección novedades</div>
                     <div class="value">
@@ -123,11 +123,12 @@
                 </div>
             </div> <!-- /.smallstat -->
         </div>
+    
         <div class="col-sm-6 col-md-3">
             <div class="statbox widget box box-shadow">
                 <div class="widget-content">
                     <div class="visual green">
-                        <i class="icon-user"></i>
+                        <i style="font-size: 20px;" class="fa fa-font" aria-hidden="true"></i>
                     </div>
                     <div class="title">Total de visitas a la sección tesis</div>
                     <div class="value">
@@ -141,7 +142,7 @@
             <div class="statbox widget box box-shadow">
                 <div class="widget-content">
                     <div class="visual coral">
-                        <i class="icon-user"></i>
+                        <i style="font-size: 18px;" class="fa fa-picture-o" aria-hidden="true"></i>
                     </div>
                     <div class="title">Total de visitas a las imágenes</div>
                     <div class="value">
@@ -155,7 +156,51 @@
             <div class="statbox widget box box-shadow">
                 <div class="widget-content">
                     <div class="visual forestgreen">
-                        <i class="icon-user"></i>
+                        <i style="font-size: 20px;" class="fa fa-headphones" aria-hidden="true"></i>
+                    </div>
+                    <div class="title">Total de visitas a la sección de Audios</div>
+                    <div class="value">
+                        <?=$total_audios;?>
+                    </div>
+                    <a class="more" href="http://escueladenegocios.coca-cola.com/admin/stats_usuarios">Ver Más <i class="pull-right icon-angle-right"></i></a>
+                </div>
+            </div> <!-- /.smallstat -->
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <div class="statbox widget box box-shadow">
+                <div class="widget-content">
+                    <div class="visual forestgreen">
+                        <i style="font-size: 20px;" class="fa fa-video-camera" aria-hidden="true"></i>
+                    </div>
+                    <div class="title">Total de visitas a la sección de videos</div>
+                    <div class="value">
+                        <?=$total_videos;?>
+                    </div>
+                    <a class="more" href="http://escueladenegocios.coca-cola.com/admin/stats_usuarios">Ver Más <i class="pull-right icon-angle-right"></i></a>
+                </div>
+            </div> <!-- /.smallstat -->
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-md-3">
+            <div class="statbox widget box box-shadow">
+                <div class="widget-content">
+                    <div class="visual forestgreen">
+                        <i style="font-size: 20px;" class="fa fa-music" aria-hidden="true"></i>
+                    </div>
+                    <div class="title">Total de visitas a la sección de partituras</div>
+                    <div class="value">
+                        <?=$total_partituras;?>
+                    </div>
+                    <a class="more" href="http://escueladenegocios.coca-cola.com/admin/stats_usuarios">Ver Más <i class="pull-right icon-angle-right"></i></a>
+                </div>
+            </div> <!-- /.smallstat -->
+        </div>
+        <div class="col-sm-6 col-md-3">
+            <div class="statbox widget box box-shadow">
+                <div class="widget-content">
+                    <div class="visual forestgreen">
+                        <i style="font-size: 18px;" class="fa fa-comment-o" aria-hidden="true"></i>
                     </div>
                     <div class="title">Total de visitas a la sección de contacto</div>
                     <div class="value">
@@ -166,6 +211,7 @@
             </div> <!-- /.smallstat -->
         </div>
     </div>
+
 
 
     <!--=== Page Content ===-->

@@ -1,5 +1,11 @@
 <?=$header;?>
 
+<div id="banner">
+    <div class="container">
+        <section>
+        </section>
+    </div>
+</div>
 <!-- Featured -->
 <div id="featured">
     <div class="container">

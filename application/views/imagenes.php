@@ -2,35 +2,22 @@
 
 <!-- Main -->
 <div id="main">
+
     <div class="container">
-        
-        <div class="row">
-            <section class="4u 12u(mobile)">
-                <img src="<?=base_url();?>media/img/audio.jpg" alt="" class="image featured" />
-                texto de prueba lalala alla qdowiqjwd uefiue iduqwodi fiweufw ieuf 
-            </section>
-            <section class="4u 12u(mobile)">
-                <img src="<?=base_url();?>media/img/videos.jpg" alt="" class="image featured" />
-                texto de prueba lalala alla qdowiqjwd uefiue iduqwodi fiweufw ieuf 
-            </section>
-            <section class="4u 12u(mobile)">
-                <img src="<?=base_url();?>media/img/musica.jpg" alt="" class="image featured" />
-                texto de prueba lalala alla qdowiqjwd uefiue iduqwodi fiweufw ieuf 
-            </section>
-        </div>
-        <div class="row">
-            <section class="4u 12u(mobile)">
-                <img src="<?=base_url();?>media/img/audio.jpg" alt="" class="image featured" />
-                texto de prueba lalala alla qdowiqjwd uefiue iduqwodi fiweufw ieuf 
-            </section>
-            <section class="4u 12u(mobile)">
-                <img src="<?=base_url();?>media/img/videos.jpg" alt="" class="image featured" />
-                texto de prueba lalala alla qdowiqjwd uefiue iduqwodi fiweufw ieuf 
-            </section>
-            <section class="4u 12u(mobile)">
-                <img src="<?=base_url();?>media/img/musica.jpg" alt="" class="image featured" />
-                texto de prueba lalala alla qdowiqjwd uefiue iduqwodi fiweufw ieuf 
-            </section>
+        <?=$breadcrumbs;?>
+        <div class="imagenes" style="display: none;"">
+            <?php foreach($imagenes as $img):?>
+
+                <?php if(file_exists('./uploads/imagenes/'.$img->id.'/'.$img->imagen)):?>
+                
+                    <section class="item 4u 12u(mobile)">
+                        <img style="margin: 0;" src="<?=base_url('uploads/imagenes/'.$img->id.'/'.$img->imagen);?>" alt="" class="image featured" />
+                        <?=$img->titulo;?>
+                    </section>
+
+                <?php endif;?>
+
+            <?php endforeach;?>
         </div>
     </div>
 </div>

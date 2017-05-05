@@ -14,10 +14,10 @@
                             <h2>Contacto</h2>
                         </header>
 
-                        <form method="post" action="#">
+                        <form id="formContacto" method="post" action="#">
                             <div class="row 50%">
                                 <div class="6u 12u(mobile)">
-                                    <input type="text" name="name" id="name" placeholder="Nombre" />
+                                    <input type="text" name="nombre" id="nombre" placeholder="Nombre" />
                                 </div>
                                 <div class="6u 12u(mobile)">
                                     <input type="text" name="email" id="email" placeholder="Email" />
@@ -25,17 +25,17 @@
                             </div>
                             <div class="row 50%">
                                 <div class="12u">
-                                    <input type="text" name="subject" id="subject" placeholder="Asunto" />
+                                    <input type="text" name="asunto" id="asunto" placeholder="Asunto" />
                                 </div>
                             </div>
                             <div class="row 50%">
                                 <div class="12u">
-                                    <textarea name="message" id="message" placeholder="Mensaje"></textarea>
+                                    <textarea name="mensaje" id="mensaje" placeholder="Mensaje"></textarea>
                                 </div>
                             </div>
                             <div class="row 50%">
                                 <div class="12u">
-                                    <a href="#" class="button">Enviar Mensaje</a>
+                                    <input type="submit" class="button" value="Enviar Mensaje">
                                     <a href="#" class="button alt">Limpiar</a>
                                 </div>
                             </div>
@@ -50,18 +50,17 @@
                         <ul class="info">
                             <li>
                                 <h3>Dirección</h3>
-                                <p> San Jose 3354<br />
-                                    Buenos Aires<br />
-                                    Argentina
+                                <p> 
+                                    <?=nl2br($contacto->direccion);?>
                                 </p>
                             </li>
                             <li>
                                 <h3>Mail</h3>
-                                <p><a href="#">infpo@eduardokusnir.com</a></p>
+                                <p><a href="#"><?=$contacto->email;?></a></p>
                             </li>
                             <li>
                                 <h3>Telefono:</h3>
-                                <p>0000-0000</p>
+                                <p><?=$contacto->telefono;?></p>
                             </li>
                         </ul>
                     </section>

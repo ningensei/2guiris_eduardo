@@ -17,7 +17,6 @@ class MY_Controller extends CI_Controller {
 		$this->folder = '';
 
 		$this->setup();
-
 		
 		$this->breadcrumbs = array(['name' => 'Inicio', 'url' => site_url()]);
 		

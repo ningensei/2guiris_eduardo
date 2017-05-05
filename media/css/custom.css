@@ -1,5 +1,16 @@
-/* AUDIOS */
-#body-audios #content article {
+/* AUDIOS / VIDEOS */
+
+@media(max-width: 767px) {
+	#body-audios .audios,
+	#body-videos .videos {
+		margin: 0;
+		padding: 0;
+		width: 100%!important;
+	}	
+}
+
+#body-audios #content article,
+#body-videos #content article {
 	background: white;
 	margin: 15px;
     padding: 15px;
@@ -7,4 +18,29 @@
 
 .breadcrumbs a {
 	cursor: pointer;
+}
+
+/* HOME */
+#banner {
+    position: relative;
+    padding: 20em 0em;
+    background: url(../img/kusnir2.jpg) no-repeat;
+    background-size: cover;
+    text-align: center;
+    height: 500px;
+}
+
+/* NOVEDADES */
+.container.novedades, .container.novedad { padding: 10px; }
+
+.container.tesis #content { text-align: left!important; }
+.container.tesis #content span.byline { width: 100%; padding: 10px 0!important; }
+
+/* IMAGENES */
+.imagenes .item { width:32.3%; padding: 10px; background: white; margin: 5px; }
+.imagenes .item img { margin: 0!important; }
+
+/* SA SUCCESS */
+.sa-success {
+	margin-bottom: 31px!important;
 }

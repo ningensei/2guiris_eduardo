@@ -71,15 +71,15 @@
                         <tbody>
                             <?php foreach ($data->result() as $row): ?>
                             <tr class="<?php echo alternator('odd', 'even');?>">
-                                <?php echo $this->admin->td($row->nombre);?>
-                                <td class="clickable" style="vertical-align:middle;"><img style="height: 200px;" src="<?=base_url();?>uploads/novedades/<?=$row->id;?>/<?=$row->img;?>"></td>
+                                <?php echo $this->admin->td($row->titulo);?>
+                                <td width="300px" class="clickable" style="vertical-align:middle;"><img style="width: 100%" src="<?=base_url();?>uploads/novedades/<?=$row->id;?>/<?=$row->imagen;?>"></td>
                                 <?php echo $this->admin->td($row->bajada);?>
-                                <?php echo $this->admin->td($row->texto);?>
+                                <?php echo $this->admin->td(implode(' ', array_slice(explode(' ', $row->texto), 0, 20)).'...');?>
 
 
                                 
                                 <?php echo $this->admin->td($row->timestamp);?>
-                                <td>
+                                <td style="vertical-align: middle;">
                                     <a href="<?php echo $route;?>/edit/<?php echo $row->id;?>" class="icon-edit">&nbsp;Editar</a> | 
                                     <a href="<?php echo $route;?>/delete/<?php echo $row->id;?>" class="icon-remove delete">&nbsp;Borrar</a>
                                 </td>

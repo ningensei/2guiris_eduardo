@@ -1,43 +1,29 @@
 <?=$header;?>
 
+<style>.item{width: 30.5%; background: white; padding: 20px 10px; margin: 10px;}</style>
 <!-- Main -->
 <div id="main">
-    <div class="container">
+    <?=$breadcrumbs;?>
+    <div class="container novedades">
 
         <!-- Content -->
             <div class="row">
-                <div id="content" class="4u 12u(mobile)">
-                    <img src="<?=base_url();?>media/img/musica.jpg" alt="" class="image featured" />
-                    <article>
-                        <header>
-                            <h2>Nuevo producto</h2>
-                        </header>
-                        <p>Aqui se comenta la nueva noticia.</p>
-                        <a href="novedades.html" class="button">Leer más</a>                                
-                    </article>
-                </div>
-                <div id="content" class="4u 12u(mobile)">                               
-                    <img src="<?=base_url();?>media/img/audio.jpg" alt="" class="image featured" />
-                    <article>
-                        <header>
-                            <h2>Recuerdos</h2>
-                        </header>
-                        <p>Aqui se comenta la nueva noticia.</p>
+                <?php foreach($novedades as $n):?>
+                    <div id="content" class="item 4u 12u(mobile)">
                         
-                        <a href="novedades.html" class="button">Leer más</a>
-                    </article>
-                </div>
-                <div id="content" class="4u 12u(mobile)">                               
-                    <img src="<?=base_url();?>media/img/audio.jpg" alt="" class="image featured" />
-                    <article>
-                        <header>
-                            <h2>Recuerdos</h2>
-                        </header>
-                        <p>Aqui se comenta la nueva noticia.</p>
-                        
-                        <a href="novedades.html" class="button">Leer más</a>
-                    </article>
-                </div>
+                        <?php if(file_exists('./uploads/novedades/'.$n->id.'/'.$n->imagen)):?>
+                            <img src="<?=base_url();?>uploads/novedades/<?=$n->id;?>/<?=$n->imagen;?>" alt="" class="image featured" />
+                        <?php endif;?>
+
+                        <article>
+                            <header>
+                                <h2><?=$n->titulo;?></h2>
+                            </header>
+                            <p><?=$n->bajada?></p>
+                            <a href="<?=site_url('novedades/ver/'.$n->id);?>" class="button">Leer más</a>                                
+                        </article>
+                    </div>
+                <?php endforeach;?>
             </div>
 
     </div>

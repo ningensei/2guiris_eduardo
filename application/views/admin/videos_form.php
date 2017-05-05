@@ -16,8 +16,15 @@
                         
                             <?php $this->admin->showErrors(); ?>
                             
-                            <?php echo $this->admin->input('titulo', 'Título', '', $row, $required=true);?>
-                            <?php echo $this->admin->input('descripcion', 'Descripción', '', $row, $required=true);?>
+                            <?php echo $this->admin->input('nombre', 'Título', '', $row, $required=true);?>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Descripción <span class="required">*</span></label>
+                                <div class="col-md-9">
+                                    <div class="input-group" style="width:100%;">
+                                        <textarea rows="8" id="descripcion" name="descripcion" class="form-control"><?php echo @$row->descripcion;?></textarea>
+                                    </div>
+                                </div>
+                            </div>
                             <?php echo $this->admin->input('url', 'URL', '', $row, $required=true);?>
                             
                             

@@ -73,7 +73,7 @@
                                 <?php echo $this->admin->td($row->descripcion);?>
                                 <?php echo $this->admin->td($row->url);?>
                                 <?php echo $this->admin->td($row->timestamp);?>
-                                <td>
+                                <td style="vertical-align: middle;">
                                     <a href="<?php echo $route;?>/edit/<?php echo $row->id;?>" class="icon-edit">&nbsp;Editar</a> | 
                                     <a href="<?php echo $route;?>/delete/<?php echo $row->id;?>" class="icon-remove delete">&nbsp;Borrar</a>
                                 </td>

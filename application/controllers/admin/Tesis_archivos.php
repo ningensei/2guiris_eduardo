@@ -21,10 +21,10 @@ class Tesis_archivos extends AdminController{
         $this->uploads = array(
             array(
                 'name' => 'archivo',
-                'prefix' => 'tesis_',
+                'prefix' => 'tesis_archivos_',
                 'suffix' => '',
                 'allowed_types' => 'jpg|gif|png|pdf',
-                'maxsize' => 2048,
+                'maxsize' => 10000,
                 'folder' => '/uploads/tesis/',
                 'keep' => true
             ),

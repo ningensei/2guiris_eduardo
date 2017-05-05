@@ -60,7 +60,6 @@
                                         <tr>
                                             <?php echo $this->admin->th('titulo', 'Título', true);?>
                                             <?php echo $this->admin->th('imagen', 'Imagen', true);?>
-                                            <?php echo $this->admin->th('descripcion', 'Descripción', true);?>
                                             <?php echo $this->admin->th('timestamp', 'Fecha de Creación', true);?>
                                             
                                             <?php echo $this->admin->th('opciones', 'Opciones', false, array('width'=>'150px'));?>
@@ -76,7 +75,6 @@
                                                 <?php else: ?>
                                                     <td> Sin Imagen </td>
                                                 <?php endif;?>
-                                                <?php echo $this->admin->td($row->descripcion);?>
                                                 <?php echo $this->admin->td($row->timestamp);?>
                                                 <td style="vertical-align: middle;">
                                                     <a href="<?php echo $route;?>/edit/<?php echo $row->id;?>" class="icon-edit">&nbsp;Editar</a> | 
@@ -87,7 +85,7 @@
 
                                         <?php if (count($data->result()) == 0): ?>
                                         <tr>
-                                            <td colspan="5" align="center" style="padding:30px 0;">
+                                            <td colspan="4" align="center" style="padding:30px 0;">
                                                 No se encontraron resultados.
                                             </td>
                                         </tr>

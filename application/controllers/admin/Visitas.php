@@ -20,6 +20,7 @@ class Visitas extends AdminController{
     }
 
     public function index() {
+        $this->data['total_sesiones'] = $this->model->total_sesiones();
         $this->data['total_visitas'] = $this->model->count_visitas();
         $this->data['total_home'] = $this->model->count_visitas('home');
         $this->data['total_catalogo'] = $this->model->count_visitas('catalogo');
@@ -27,7 +28,10 @@ class Visitas extends AdminController{
         $this->data['total_novedades'] = $this->model->count_visitas('novedades');
         $this->data['total_tesis'] = $this->model->count_visitas('tesis');
         $this->data['total_imagenes'] = $this->model->count_visitas('imagenes');
-        $this->data['total_contacto'] = $this->model->count_visitas('imagenes');
+        $this->data['total_contacto'] = $this->model->count_visitas('contacto');
+        $this->data['total_audios'] = $this->model->count_visitas('audios');
+        $this->data['total_partituras'] = $this->model->count_visitas('partituras');
+        $this->data['total_videos'] = $this->model->count_visitas('videos');
 
         parent::index();
     }

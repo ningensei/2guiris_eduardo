@@ -15,6 +15,11 @@
         <link rel="stylesheet" type="text/css" href="<?=base_url();?>media/css/custom.css">
         <!--[if lte IE 8]><link rel="stylesheet" href="media/css/ie8.css" /><![endif]-->
         <!--[if lte IE 9]><link rel="stylesheet" href="media/css/ie9.css" /><![endif]-->
+        <?php if(isset($cssFiles)):?>
+            <?php foreach($cssFiles as $href):?>
+                <link rel="stylesheet" type="text/css" href="<?=$href;?>">
+            <?php endforeach;?>
+        <?php endif;?>
     </head>
     <body class="homepage" id="body-<?=$current;?>">
         <div id="page-wrapper">

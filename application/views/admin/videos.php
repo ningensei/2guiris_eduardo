@@ -61,6 +61,7 @@
                                 <?php echo $this->admin->th('nombre', 'Nombre', true);?>
                                 <?php echo $this->admin->th('descripcion', 'Descripcion', true);?>
                                 <?php echo $this->admin->th('url', 'URL', true);?>
+                                <?php echo $this->admin->th('host', 'Video Host', true);?>
                                 <?php echo $this->admin->th('timestamp', 'Fecha de Creación', true);?>
                                 
                                 <?php echo $this->admin->th('opciones', 'Opciones', false, array('width'=>'150px'));?>
@@ -72,8 +73,9 @@
                                 <?php echo $this->admin->td($row->nombre);?>
                                 <?php echo $this->admin->td($row->descripcion);?>
                                 <?php echo $this->admin->td($row->url);?>
+                                <?php echo $this->admin->td($row->host);?>
                                 <?php echo $this->admin->td($row->timestamp);?>
-                                <td>
+                                <td style="vertical-align: middle;">
                                     <a href="<?php echo $route;?>/edit/<?php echo $row->id;?>" class="icon-edit">&nbsp;Editar</a> | 
                                     <a href="<?php echo $route;?>/delete/<?php echo $row->id;?>" class="icon-remove delete">&nbsp;Borrar</a>
                                 </td>

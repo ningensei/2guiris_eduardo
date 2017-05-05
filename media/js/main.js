@@ -30,7 +30,7 @@
 			});
 
 		// Dropdowns.
-			$('#nav > ul').dropotron({
+			$('#nav > ul, #nav1 > ul, #nav2 > ul').dropotron({
 				offsetY: -11,
 				noOpenerFade: true,
 				alignment: 'center'

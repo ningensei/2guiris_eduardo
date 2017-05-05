@@ -1,5 +1,6 @@
 <?php
-class Partituras extends MY_Controller {
+require 'FrontController.php';
+class Partituras extends FrontController {
 
     function __construct() {
         parent::__construct();
@@ -11,7 +12,9 @@ class Partituras extends MY_Controller {
     }
     
     function index() {
-        $this->data['partituras'] = $this->model->getAll()->result();
+        log_visita('partituras');
+
+        $this->data['partituras'] = $this->model->getAll($num=100000, $offset=0, $sort='', $type='ASC')->result();
         $this->render('partituras', $this->data);
     }
 }

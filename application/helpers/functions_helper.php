@@ -1,6 +1,15 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 // ------------------------------------------------------------------------
 
+function log_visita($seccion) {
+	$CI =& get_instance();
+	$data = array(
+        'seccion' => $seccion,
+        'ip' => $_SERVER['REMOTE_ADDR']
+	);
+
+	$CI->db->insert('visitas', $data);
+}
 
 function renderBreadcrumbs($breadcrumbs) {
 	$res = '<div class="breadcrumbs">';

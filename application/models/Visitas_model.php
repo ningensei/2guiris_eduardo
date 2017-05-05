@@ -10,6 +10,11 @@ class Visitas_model extends MGeneric {
         $this->pk = "id";
     }
 
+    public function total_sesiones()
+    {
+        return $this->db->query('select count(*) as total from sesiones')->row()->total;
+    }
+
     public function count_visitas($seccion = false)
     {
         $q = 'select count(*) as total from visitas ';

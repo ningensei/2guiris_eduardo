@@ -8,6 +8,8 @@
 
             <!-- Content -->
                 <div id="content" class="8u 12u(mobile)">
+
+                <!-- BIOGRAFIA -->
                     <article>
                         <header>
                             <h2>Biografía</h2>
@@ -35,30 +37,17 @@
                         </div>
                         <p>Nuevamente de regreso en su país natal, en el año 2001 se incorpora como restaurador encargado de la digitalización de archivos sonoros en el Instituto Nacional de Musicología “Carlos Vega”. En 2011 coordinó el festival latinoamericano “Resonancias de la modernidad” en conmemoración del 50 aniversario de la fundación del CLAEM, evento auspiciado por la Secretaría de Cultura de la Nación.</p>
                         <p>Ha ejercido como crítico musical y columnistas en los diarios “El Nacional” (Venezuela) y “El Nuevo Día (San Juan de Puerto Rico).</p>
-                        <section>
+
+                    <!-- DISTINCIONES -->
+                        <section style="margin-top: 50px;">
                         <header>
                             <h2>Distinciones</h2>
                         </header>
                         <p>BECAS, PREMIOS, ENCARGOS, PUBLICACIONES Y DISTINCIONES:</p>
                         <ul class="style1">
-                            <li>Premio de Composición “Casa de las Américas” (Cuba 1965): Primer Premio, categoría música coral.</li>
-                            <li>Concurso de Composición del Fondo Nacional de las Artes (Argentina, 1976): Primer Premio categoría música coral y Primer Premio categoría música de cámara.</li>
-                            <li>Concurso de Composición del Instituto Goethe de Buenos Aires: Segundo Premio.</li>
-                            <li>Premio “Euphonie d’or” en el Concurso Internacional de Música Electroacústica de Bourges, Francia, 1992.</li>
-                            <li>Gran Premio “Magistère” en el Concurso Internacional de Música Electroacústica de Bourges, Francia, 1997, por la obra titulada “Juegos I”.</li>
-                            <li>Encargo del Instituto de Psicoacústica y Música Electrónica (IPEM) de Gante , Bélgica, para la composición de la obra “Ofrenda” (1972).</li>
-                            <li>Sucesivos encargos del Grupo de Música Experimental de Bourges, Francia, para la composición y publicación de las siguientes obras musicales: “Lily en el Fuego” (1987), “Miranda en Francia” (1989), “Simple” (1990), “Retorno” (1992), “Una carta” (1996), “Homenaje a Schaeffer” (1996).</li>
-                            <li>Sucesivos encargos del L.I.P.M de Buenos Aires, Argentina, para la composición de las siguientes obras musicales: “Cómo es Lily” (1985), “Buenos días, fue un buen día” (1991).</li>
-                            <li>Beca del Ministerio de Cultura de Bulgaria (1956-91), para estudios en el Conservatorio Búlgaro del Estado.</li>
-                            <li>Beca del Instituto Di Tella de Buenos Aires (1069-70), para estudios de especialización en composición musical.</li>
-                            <li>Beca del Ministerio de Asuntos Extranjeros de Francia (1972-74) para estudios de doctorado.</li>
-                            <li>Beca del Ministerio de Cultura de España (diciembre del 95-enero del 96) para estudios en el Laboratorio de Informática Musical del Centro Reina Sofía de Madrid.</li>
-                            <li>Publicación de la obra musical “La Panadería” por el sello disquero “Tacuabé”, Montevideo, Uruguay, 1975.</li>
-                            <li>Publicación del CD titulado “Lily”  con siete composiciones musicales, por el sello francés “Chrisopée electronique” (1997).</li>
-                            <li>Publicación del CD “Cultures Electroniques #10” , serie UNESCO/CIME, que contiene    “Juegos I”,  obra premiada en el 24avo  Concurso Internacional de Bourges, Francia.</li>
-                            <li>Encargo de la Secretaría de Cultura de la Nación para la composición de “La vida en Mutacio”, ópera de cámara (Buenos Aires, 2012).</li>
-                            <li>Crítico musical del diario “El Nacional” de Venezuela y columnista de su suplemento “Papel literario”.</li>
-                            <li>Crítico musical del diario “El nuevo día” de Puerto Rico.</li>
+                            <?php foreach($distinciones as $distincion):?>
+                                <li><?=$distincion->nombre;?></li>
+                            <?php endforeach;?>
                             
                         </ul>
                     </section>
@@ -66,7 +55,7 @@
                     </article>
                 </div>
 
-            <!-- Sidebar -->
+            <!-- ENLACES DE INTERES (sidebar) -->
                 <div id="sidebar" class="4u 12u(mobile)">
 
                     <section>
@@ -74,16 +63,9 @@
                             <h2>Enlaces de interes</h2>
                         </header>
                         <ul class="style1">
-                            <li><a href="#">CEDIAM-UCV:EDUARDO KUSNIR</a></li>
-                            <li><a href="#">MIMAROGLU MUSIC SALES-EDUARDO KUSNIR</a></li>
-                            <li><a href="#">“LA VIDA EN MUTANCIO” DE EDUARDO KUSNIR</a></li>
-                            <li><a href="#">FESTIVAL INTERNACIONAL DE BOURGES – WIKIPEDIA, LA ENCICLOPEDIA LIBRE</a></li>
-                            <li><a href="#">EDUARDO KUSNIR, COMPOSITEUR // DISCOGRAPHIE  LA BOUTIQUE ÉLECTROACOUSTIQUE</a></li>
-                            <li><a href="#">LA MÚSICA EN EL DI TELLA | CRÉDITOS DE PRODUCCIÓN</a></li>
-                            <li><a href="#">LA MÚSICA EN EL DI TELLA – CENTRO CULTURAL BORGES – MÚSICA – OCCIDENTES</a></li>
-                            <li><a href="#">CEDIAM-UCV:QUIÉNES SOMOS</a></li>
-                            <li><a href="#">LA COCINA DE CE: LA PANADERIA DE EDUARDO KUSNIR</a></li>
-                            <li><a href="#">XVII FESTIVAL LATINOAMERICANO DE MÚSICA 2012 – COMPOSITORES E INTÉRPRETES</a></li>
+                            <?php foreach($enlaces as $enlace):?>
+                                <li><a href="<?=$enlace->url;?>"><?=$enlace->nombre;?></a></li>
+                            <?php endforeach;?>
                         </ul>
                         
                     </section>

@@ -61,11 +61,11 @@
                         <thead>
                             <tr>
                                 <?php echo $this->admin->th('nombre', 'Nombre', true);?>
-                                <?php echo $this->admin->th('direccion', 'Dirección', true);?>
                                 <?php echo $this->admin->th('email', 'Email', true);?>
                                 <?php echo $this->admin->th('asunto', 'Asunto', true);?>
                                 <?php echo $this->admin->th('mensaje', 'Mensaje', true);?>
                                 <?php echo $this->admin->th('timestamp', 'Fecha', true);?>
+                                <?php echo $this->admin->th('opciones', 'Opciones', false, array('width'=>'150px'));?>
                                 
                             </tr>
                         </thead>
@@ -73,11 +73,13 @@
                             <?php foreach ($data->result() as $row): ?>
                             <tr class="<?php echo alternator('odd', 'even');?>">
                                 <?php echo $this->admin->td($row->nombre);?>
-                                <?php echo $this->admin->td($row->direccion);?>
                                 <?php echo $this->admin->td($row->email);?>
                                 <?php echo $this->admin->td($row->asunto);?>
                                 <?php echo $this->admin->td($row->mensaje);?>
                                 <?php echo $this->admin->td($row->timestamp);?>
+                                <td style="vertical-align: middle;">
+                                    <a href="<?php echo $route;?>/delete/<?php echo $row->id;?>" class="icon-remove delete">&nbsp;Borrar</a>
+                                </td>
                                 
                             </tr>
                             <?php endforeach; ?>

@@ -64,6 +64,8 @@
 	.hidden-xs { display: none; }
 }
 
+.text-left { text-align: left; }
+
 /* Containers */
 
 	.container {
@@ -2020,7 +2022,7 @@
 	#banner {
 		position: relative;
 		padding: 20em 0em;
-		background: url(../../images/kusnir2.jpg) no-repeat;
+		background: url(../img/kusnir2.jpg) no-repeat;
 		background-size: cover;
 		text-align: center;
 		height:500px;
@@ -2116,7 +2118,7 @@
 	}
 
 	.homepage #main {
-		padding: 10px 0;
+		padding: 10px 0 60px 0;
 		text-align: center;
 	}
 
@@ -2139,7 +2141,7 @@
 	#main2 {
 		position: relative;
 		padding: 2em 0em;
-		background: url(../../images/musica2.jpg) no-repeat;
+		background: url(../img/musica2.jpg) no-repeat;
 		background: cover;
 	}
 
@@ -2228,7 +2230,7 @@
 	#main3 {
 		position: relative;
 		padding: 2em 0em;
-		background: url(../../images/tesis.jpg) no-repeat;
+		background: url(../img/tesis2.jpg) no-repeat;
 		background: cover;
 	}
 

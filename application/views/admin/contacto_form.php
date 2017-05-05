@@ -16,7 +16,14 @@
                         
                             <?php $this->admin->showErrors(); ?>
                             
-                            <?php echo $this->admin->input('direccion', 'Dirección', '', $row, $required=true);?>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Dirección <span class="required">*</span></label>
+                                <div class="col-md-9">
+                                    <div class="input-group" style="width:100%;">
+                                        <textarea rows="8" id="direccion" name="direccion" class="form-control"><?php echo @$row->direccion;?></textarea>
+                                    </div>
+                                </div>
+                            </div>
                             <?php echo $this->admin->input('email', 'Email', '', $row, $required=true);?>
                             <?php echo $this->admin->input('telefono', 'Teléfono', '', $row, $required=true);?>
                             

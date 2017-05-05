@@ -16,9 +16,9 @@
                         
                             <?php $this->admin->showErrors(); ?>
                             
-                            <?php echo $this->admin->input('nombre', 'Nombre', '', $row, $required=true);?>
+                            <?php echo $this->admin->input('titulo', 'Título', '', $row, $required=true);?>
                             <?php echo $this->admin->file('imagen', 'Imagen', '', isset($row->imagen) ? $row->imagen : '', '/uploads/novedades/' . (isset($row->id) ? $row->id : '') .'/', $required=true);?>
-                            <?php echo $this->admin->input('bajada', 'Bajada', '', $row, $required=true);?>
+                            <?php echo $this->admin->input('bajada', 'Subtítulo', '', $row, $required=true);?>
                             <div class="form-group">
                                 <label class="col-md-3 control-label">Texto Informativo <span class="required">*</span></label>
                                 <div class="col-md-9">

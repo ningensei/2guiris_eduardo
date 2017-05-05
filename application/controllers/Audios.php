@@ -1,5 +1,6 @@
 <?php
-class Audios extends MY_Controller {
+require 'FrontController.php';
+class Audios extends FrontController {
 
     function __construct() {
         parent::__construct();
@@ -10,7 +11,6 @@ class Audios extends MY_Controller {
         $this->data['jsFiles'] = [
             base_url().'media/plugins/masonry.pkgd.min.js',
             base_url().'media/js/audios.js',
-
         ];
         $this->breadcrumbs[] = array('name' => 'Audios', 'url' => '');
         
@@ -19,7 +19,8 @@ class Audios extends MY_Controller {
     }
     
     function index() {
-        
+        log_visita('audios');
+
         $this->data['breadcrumbs'] = renderBreadcrumbs($this->breadcrumbs);
         
 

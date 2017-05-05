@@ -1,5 +1,6 @@
 <?php
-class Home extends MY_Controller {
+require 'FrontController.php';
+class Home extends FrontController {
 
     function __construct() {
         parent::__construct();
@@ -9,6 +10,7 @@ class Home extends MY_Controller {
     }
     
     function index() {
+    	log_visita('home');
         $this->render('home');
     }
 }
