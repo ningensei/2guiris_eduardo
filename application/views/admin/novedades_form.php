@@ -4,7 +4,7 @@
     <div class="page-header">
         <div class="page-title">
             <h3><?php echo implode(" &raquo; ", $this->breadcrumbs);?></h3>
-            <span>Subir una partitura al servidor</span>
+            <span>Agregar/Editar una novedad</span>
         </div>
     </div>
     

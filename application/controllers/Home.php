@@ -11,6 +11,10 @@ class Home extends FrontController {
     
     function index() {
     	log_visita('home');
-        $this->render('home');
+
+    	$this->load->model('Novedades_model', 'Novedades');
+    	$this->data['novedades'] = $this->Novedades->getAll(3)->result();
+
+        $this->render('home', $this->data);
     }
 }

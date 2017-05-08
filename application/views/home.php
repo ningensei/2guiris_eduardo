@@ -11,42 +11,20 @@
     <div class="container">
         <div class="row">
 
-
-            <!-- Featured 1 -->
+            <?php foreach($novedades as $novedad):?>
                 <section class="4u 12u(mobile)">
                     <header>
-                        <img src="<?=base_url();?>media/img/noticia_home1.jpg" alt="" class="image featured" />
-                        <h2>Resonancias de la modernidad</h2>
+                        <?php if(file_exists('./uploads/novedades/'.$novedad->id.'/'.$novedad->imagen)):?>
+                            <img src="<?=base_url();?>uploads/novedades/<?=$novedad->id;?>/<?=$novedad->imagen;?>" alt="" class="image featured"/>
+                        <?php endif;?>
+                        <h2><?=$novedad->titulo;?></h2>
                     </header>
                     <div class="box-style">
-                        <p>Los compositores Gerardo Gandini y Eduardo Kusnir son los programadores del festival, que tendrá como directores a Alejo Pérez, Jorge Sarmientos y Alfredo Rugeles, para las obras sinfóni...</p>
+                        <p><?=$novedad->bajada;?></p>
                     </div>
-                    <a href="novedades.html" class="button">Leer más</a>
+                    <a href="<?=site_url()?>novedades/ver/<?=$novedad->id;?>" class="button">Leer más</a>
                 </section>
-
-            <!-- Featured 2 -->
-                <section class="4u 12u(mobile)">
-                    <header>
-                        <img src="<?=base_url();?>media/img/noticia_home2.jpg" alt="" class="image featured" />
-                        <h2>Blogspot</h2>
-                    </header>
-                    <div class="box-style">
-                        <p>El 50° aniversario del Centro Latinoamericano de Altos Estudios Musicales (Claem), parte del Instituto Di Tella, será celebrado con un Festival Internacional en junio y también, anunció la Secretaría de Cultura de la Nación, con un concurso para compositores no mayores de 35 años. Los jurados serán Gerardo Gandini, Mariano Etkin y Eduardo Kusnir.</p>
-                    </div>
-                    <a href="novedades.html" class="button">Leer más</a>
-                </section>
-
-            <!-- Featured 3 -->
-                <section class="4u 12u(mobile)">
-                    <header>
-                        <img src="<?=base_url();?>media/img/noticia_home3.jpg" alt="" class="image featured" />
-                        <h2>Resonancias de la modernidad</h2>
-                    </header>
-                    <div class="box-style">
-                        <p>Los compositores Gerardo Gandini y Eduardo Kusnir son los programadores del festival, que tendrá como directores a Alejo Pérez, Jorge Sarmientos y Alfredo Rugeles, para las obras sinfóni...</p>
-                    </div>
-                    <a href="novedades.html" class="button">Leer más</a>
-                </section>
+            <?php endforeach;?>
 
         </div>
     </div>
