@@ -93,6 +93,41 @@ class MY_Controller extends CI_Controller {
 		$this->pconfig['uri_segment'] = $this->pageSegment;
 	}
 
+	/**
+     * generar paginador
+     *
+     * @return void
+     **/
+    function render_paginador($base_url, $total_rows, $per_page, $segment=3)
+    {
+        $this->load->library('pagination');
+
+        $config['full_tag_open'] = '<ul>';
+        $config['full_tag_close'] = '</ul>';
+        $config['last_link'] = FALSE;
+        $config['first_link'] = FALSE;
+        $config['next_link'] = '<i class="fa fa-arrow-right" aria-hidden="true"></i>';
+        $config['prev_link'] = '<i class="fa fa-arrow-left" aria-hidden="true"></i>';
+        $config['next_tag_open'] = '<li>';
+        $config['next_tag_close'] = '</li>';
+        $config['prev_tag_open'] = '<li>';
+        $config['prev_tag_close'] = '</li>';
+        $config['cur_tag_open'] = '<li class="active"><span>';
+        $config['cur_tag_close'] = '</span></li>';
+        $config['num_tag_open'] = '<li>';
+        $config['num_tag_close'] = '</li>';
+
+        $config['base_url'] = $base_url;
+        $config['total_rows'] = $total_rows;
+        $config['per_page'] = $per_page;
+
+        $config['uri_segment'] = $segment;
+
+        $this->pagination->initialize($config);
+
+        return $this->pagination->create_links();
+    }
+
 	function paginar($baseURL, $totalRows, $limit, $segment=3) {
 		$this->load->library('pagination');
 		$config['base_url'] = $baseURL;
@@ -117,6 +152,8 @@ class MY_Controller extends CI_Controller {
 
 		return $this->pagination->create_links();		
 	}
+
+
 	//orden de listados por más populares o más recientes
 	function set_orden($scope='noticias',$q_sort='recientes'){
 		$this->session->set_userdata($scope.'_q_sort',$q_sort);

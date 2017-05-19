@@ -8,7 +8,7 @@
     <div class="container videos">
 
         <!-- Content -->
-
+        <div class="row">
             <?php foreach($videos as $video): ?>
 
                 <div id="content" class="item 6u 12u(mobile)">
@@ -25,7 +25,11 @@
                 </div>
 
             <?php endforeach;?>
-            
+        </div>
+
+        <div class="row paginador">
+            <?=$paginador;?>
+        </div>
 
     </div>
 </div>

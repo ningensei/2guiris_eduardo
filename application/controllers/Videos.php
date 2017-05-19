@@ -16,11 +16,15 @@ class Videos extends FrontController {
 
     }
     
-    function index() {
+    function index($page = 0) {
         log_visita('videos');
 
         $this->data['breadcrumbs'] = renderBreadcrumbs($this->breadcrumbs);
-        $this->data['videos'] = $this->model->getAll()->result();
+        
+        $this->data['videos'] = $this->model->getAll(4, $page)->result();
+
+        $this->data['paginador'] = $this->render_paginador(base_url('audios/index'), $this->model->totalRows(), 4);
+
         $this->render('videos', $this->data);
     }
 }

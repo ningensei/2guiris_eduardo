@@ -26,6 +26,10 @@
                 <?php endforeach;?>
             </div>
 
+            <div class="row paginador">
+                <?=$paginador;?>
+            </div>
+
     </div>
 </div>
 
