@@ -9,12 +9,17 @@
 	}	
 }
 
-#body-audios #content article,
-#body-videos #content article {
-	background: white;
-	margin: 15px;
-    padding: 15px;
-}
+	#body-audios #content article,
+	#body-videos #content article {
+		text-align: justify;
+		background: white;
+		margin: 15px;
+	    padding: 15px;
+	}
+	#body-audios #content article h2,
+	#body-videos #content article h2{
+		text-align: center;
+	}
 
 .breadcrumbs a {
 	cursor: pointer;
@@ -37,10 +42,67 @@ main .container,
     height: 500px;
 }
 
+/* BIOGRAFIA */
+
+
+
+#body-biografia #content article header .byline {
+	padding: 0!important;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	text-align: justify;
+	width: 90%; 
+}
+
+#body-biografia #content article > p {
+	text-align: justify;
+}
+
+#body-biografia .enlaces h2 {
+	text-align: left;
+}
+
+#body-biografia .enlaces ul li {
+	text-align: left;
+}
+
+#body-biografia .distinciones {
+	margin-top: 50px;
+}
+
+#body-biografia .distinciones ul li {
+	text-align: justify;
+}
+
 /* NOVEDADES */
 .container.novedades, .container.novedad { padding: 10px; }
 
 
+#body-novedades #content p {
+	text-align: justify;
+}
+
+/* NOVEDADES */
+.container.otros, .container.otro { padding: 10px; }
+
+
+#body-otros #content p {
+	text-align: justify;
+}
+
+
+/* COMPOSICIONES */
+.container.composiciones { text-align: left; }
+.container.composiciones #content { 
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    padding: 20px 50px;
+    margin-top: 60px;
+    background: #fff;
+
+ }
+.container.composiciones .subtitle { font-size: 20px; }
 
 
 /* TESIS */

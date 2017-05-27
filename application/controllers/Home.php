@@ -7,6 +7,17 @@ class Home extends FrontController {
         
         $this->data['current'] = 'home';
 
+        $this->data['cssFiles'] = [
+
+            base_url().'media/plugins/OwlCarousel2/dist/assets/owl.carousel.min.css',
+        ];
+
+        $this->data['jsFiles'] = [
+
+            base_url().'media/plugins/OwlCarousel2/dist/owl.carousel.min.js',
+            base_url().'media/js/home.js',
+        ];
+
     }
     
     function index() {

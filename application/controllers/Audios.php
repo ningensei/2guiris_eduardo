@@ -23,9 +23,10 @@ class Audios extends FrontController {
 
         $this->data['breadcrumbs'] = renderBreadcrumbs($this->breadcrumbs);
 
-        $this->data['audios'] = $this->model->getAll(3, $page)->result();
+        $this->data['audios'] = $this->model->getAll(6, $page)->result();
+        
 
-        $this->data['paginador'] = $this->render_paginador(base_url('audios/index'), $this->model->totalRows(), 3);
+        $this->data['paginador'] = $this->render_paginador(base_url('audios/index'), $this->model->totalRows(), 6);
 
         $this->render('audios', $this->data);
     }

@@ -46,5 +46,28 @@
         </div>
     </div>
     
-        
+    
 <?php echo $footer; ?>
+<script type="text/javascript" src="<?=base_url();?>media/admin/ckeditor/ckeditor.js"></script>
+<script type="text/javascript">
+    
+    $(document).ready(function(){
+        //CKEDITOR.config.extraPlugins = 'lineutils,widget,oembed,tabbedimagebrowser,mediaembed';
+        CKEDITOR.config.extraPlugins = 'mediaembed';
+        CKEDITOR.config.filebrowserImageUploadUrl = 'http://escueladenegocios.coca-cola.com/admin/uploader';
+        CKEDITOR.config.extraAllowedContent = 'blockquote[*](*)';
+        CKEDITOR.config.height = '340px';
+        CKEDITOR.config.enterMode = CKEDITOR.ENTER_BR;
+        CKEDITOR.replace( 'descripcion', {
+            language: 'es',
+            toolbar : [
+                { name: 'document', groups: [ 'mode', 'document', 'doctools' ], items: [ 'Source' ] },
+                { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ], items: [ 'Bold', 'Italic', 'Underline', 'TextColor', '-', 'RemoveFormat' ] },
+                // { name: 'insert', items: [ 'Image', 'MediaEmbed', 'Table', 'Iframe' ] },
+                { name: 'links', items: [ 'Link', 'Unlink', 'Anchor' ] },
+                { name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ], items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] }
+            ]           
+        });
+    });
+
+</script>
