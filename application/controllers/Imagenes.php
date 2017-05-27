@@ -19,12 +19,16 @@ class Imagenes extends FrontController {
 
     }
     
-    function index() {
+    function index($page = 0) {
         log_visita('imagenes');
 
         $this->data['breadcrumbs'] = renderBreadcrumbs($this->breadcrumbs);
 
-        $this->data['imagenes'] = $this->model->getAll($num=100000, $offset=0, $sort='', $type='ASC')->result();
+        $this->data['imagenes'] = $this->model->getAll(6, $page, $sort='', $type='ASC')->result();
+
+        $this->data['paginador'] = $this->render_paginador(base_url('audios/index'), $this->model->totalRows(), 6);
+
+        
         $this->render('imagenes', $this->data);
     }
 }

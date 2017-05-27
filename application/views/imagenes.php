@@ -5,6 +5,7 @@
 
     <div class="container">
         <?=$breadcrumbs;?>
+
         <div class="imagenes" style="display: none;"">
             <?php foreach($imagenes as $img):?>
 
@@ -18,6 +19,10 @@
                 <?php endif;?>
 
             <?php endforeach;?>
+        </div>
+
+        <div class="row paginador">
+            <?=$paginador;?>
         </div>
     </div>
 </div>

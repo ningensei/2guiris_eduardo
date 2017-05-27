@@ -18,13 +18,16 @@ class Audios extends FrontController {
 
     }
     
-    function index() {
+    function index($page = 0) {
         log_visita('audios');
 
         $this->data['breadcrumbs'] = renderBreadcrumbs($this->breadcrumbs);
+
+        $this->data['audios'] = $this->model->getAll(6, $page)->result();
         
 
-        $this->data['audios'] = $this->model->getAll()->result();
+        $this->data['paginador'] = $this->render_paginador(base_url('audios/index'), $this->model->totalRows(), 6);
+
         $this->render('audios', $this->data);
     }
 }

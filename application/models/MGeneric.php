@@ -10,11 +10,11 @@ class MGeneric extends CI_Model {
 	var $filters = '';			//Array de filtros a usar para obtener los listados
 	var $pk;
 	
-	function __construct(){
+	public function __construct(){
 		parent::__construct();
 	}
 
-	function getAll($num=100000, $offset=0, $sort='', $type='DESC', $keywords='') {
+	public function getAll($num=100000, $offset=0, $sort='', $type='DESC', $keywords='') {
 		if ($sort == '') $sort=$this->pk;
 		
 		$this->onGetAll();
@@ -42,12 +42,12 @@ class MGeneric extends CI_Model {
 	}
 
 	/*
-	function get($id) {
+	public function get($id) {
 		$query = $this->db->get_where($this->table, array('id' => $id));
 		return $query;
 	}
 	*/
-	function get($id) {
+	public function get($id) {
 		$this->db->select($this->table . '.* ');
 		$this->onGet();
 		$query = $this->db->get_where($this->table, array($this->table . '.' . $this->pk => $id));
@@ -55,7 +55,7 @@ class MGeneric extends CI_Model {
 	}	
 
 	/*
-	function update($id, $data) {
+	public function update($id, $data) {
 		foreach ($data as $key=>$value) {
 			if ($this->db->field_exists($key, $this->table))
 				$finalData[$key] = $value;
@@ -66,12 +66,12 @@ class MGeneric extends CI_Model {
 	}
 	*/
 	
-	function onGetAll() {
+	public function onGetAll() {
 	}
-	function onGet() {
+	public function onGet() {
 	}
 	
-	function update($id, $data) {
+	public function update($id, $data) {
 		#$this->db->query("SET time_zone = '-06:00'"); //Set timezone de Mexico
 
 		//Actualizar los datos del artista
@@ -101,7 +101,7 @@ class MGeneric extends CI_Model {
 	}	
 
 	/*
-	function insert($data) {
+	public function insert($data) {
 		foreach ($data as $key=>$value) {
 			if ($this->db->field_exists($key, $this->table))
 				$finalData[$key] = $value;
@@ -111,7 +111,7 @@ class MGeneric extends CI_Model {
 		return $this->db->insert_id();
 	}
 	*/
-	function insert($data) {	
+	public function insert($data) {	
 		//$this->db->query("SET time_zone = '-06:00'"); //Set timezone de Mexico
 		
 		foreach ($data as $key=>$value) {
@@ -142,17 +142,22 @@ class MGeneric extends CI_Model {
 	}
 	
 
-	function deleteWhere($arr_fields) {
+	public function deleteWhere($arr_fields) {
 		$this->db->where($arr_fields);
 		$this->db->delete($this->table); 
 	}
 
-	function delete($id) {
+	public function delete($id) {
 		$this->db->where(array('id'=>$id));
 		$this->db->delete($this->table); 
 	}
 
-	function count($keywords = '') {
+	public function totalRows() {
+    	return $this->db->query('select count(*) as total from '.$this->table)->row()->total;
+    }
+
+
+	public function count($keywords = '') {
 		$this->onGetAll();
 		
 		if ($keywords != '') {
@@ -170,17 +175,17 @@ class MGeneric extends CI_Model {
 		return $this->db->count_all_results($this->table);
 	}
 
-	function countWhere($arr_fields){
+	public function countWhere($arr_fields){
 		$this->db->where($arr_fields);
 		return $this->db->count_all_results($this->table);
 	}
 	
-	function getWhere($arr_fields){
+	public function getWhere($arr_fields){
 		$this->db->where($arr_fields);
 		return $this->db->get($this->table);
 	}
 	
-	function getByName($name){
+	public function getByName($name){
 		$q = "select * from ".$this->table." where nombre like '%" . $name . "%'  COLLATE 'utf8_general_ci'";
 		$data = $this->db->query($q);
 		return $data;
@@ -209,7 +214,7 @@ class MGeneric extends CI_Model {
         
     }
 	
-	function getList($filters='', $orderby='', $pager='') {
+	public function getList($filters='', $orderby='', $pager='') {
 		parse_str($filters, $parameters);
 		parse_str($pager, $pagerinfo);
 		if ($orderby) {
@@ -222,18 +227,18 @@ class MGeneric extends CI_Model {
 		return $this->db->get_where($this->table, $parameters)->result();
 	}
 	
-	function getBy($filters) {
+	public function getBy($filters) {
 		parse_str($filters, $parameters);
 		return $this->db->get_where($this->table, $parameters)->row();
 	}
 
-	function countBy($filters) {
+	public function countBy($filters) {
 		parse_str($filters, $parameters);
 		$this->db->where($parameters);
 		return $this->db->count_all_results($this->table);
 	}
 	
-	function update_batch($data) {
+	public function update_batch($data) {
 		return $this->db->update_batch($this->table, $data, 'id');
 	}
 	

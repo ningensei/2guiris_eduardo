@@ -51,6 +51,11 @@ class AdminController extends MY_Controller {
 				"url"		=>	"#",
 				"sections"	=>	array(
 									array(
+										"label"		=>	"composiciones",
+										"name"		=>	"<i style='font-size: 20px;' class='fa fa-headphones' aria-hidden='true'></i> Listado de composiciones",
+										"url"		=>	"composiciones"
+									),
+									array(
 										"label"		=>	"audios",
 										"name"		=>	"<i style='font-size: 20px;' class='fa fa-headphones' aria-hidden='true'></i> Audios",
 										"url"		=>	"audios"
@@ -93,19 +98,24 @@ class AdminController extends MY_Controller {
 			),
 
 			array(
-				"label"		=>	"tesis",
-				"name"		=>	"<i style='font-size: 20px;' class='fa fa-font' aria-hidden='true'></i>Tesis",
+				"label"		=>	"textos",
+				"name"		=>	"<i style='font-size: 20px;' class='fa fa-font' aria-hidden='true'></i>Textos",
 				"url"		=>	"#",
 				"sections"	=>	array(
 									array(
 										"label"		=>	"tesis",
-										"name"		=>	"Info",
+										"name"		=>	"Tesis - Info",
 										"url"		=>	"tesis"
 									),
 									array(
 										"label"		=>	"tesis_archivos",
-										"name"		=>	"Archivos",
+										"name"		=>	"Tesis - Archivos",
 										"url"		=>	"tesis_archivos"
+									),
+									array(
+										"label"		=>	"otros",
+										"name"		=>	"Otros",
+										"url"		=>	"otros"
 									),
 								)
 			),

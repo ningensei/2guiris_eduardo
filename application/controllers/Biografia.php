@@ -9,6 +9,16 @@ class Biografia extends FrontController {
         $this->load->model('Distinciones_model', 'Distinciones');
         $this->load->model('Enlaces_model', 'Enlaces');
 
+        $this->data['cssFiles'] = [
+
+            base_url().'media/plugins/lightbox/css/lightbox.min.css',
+        ];
+
+        $this->data['jsFiles'] = [
+
+            base_url().'media/plugins/lightbox/js/lightbox.min.js',
+        ];
+
     }
     
     function index() {

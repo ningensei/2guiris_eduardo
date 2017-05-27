@@ -38,6 +38,7 @@
                                     <li>
                                         <a href="#">CATALOGO</a>
                                         <ul>
+                                            <li><a href="<?=site_url('composiciones');?>">Listado de composiciones</a></li>
                                             <li><a href="<?=site_url('audios');?>">AUDIOS</a></li>
                                             <li><a href="<?=site_url('videos');?>">VIDEOS</a></li>
                                             <li><a href="<?=site_url('partituras');?>">PARTITURAS</a></li>
@@ -45,7 +46,13 @@
                                     </li>
                                     <li><a href="<?=site_url('biografia');?>">Biografía</a></li>
                                     <li><a href="<?=site_url('novedades');?>">NOVEDADES</a></li>
-                                    <li class="break"><a href="<?=site_url('tesis');?>">TESIS</a></li>
+                                    <li>
+                                        <a href="#">TEXTOS</a>
+                                        <ul>
+                                            <li><a href="<?=site_url('tesis');?>">TESIS</a></li>
+                                            <li><a href="<?=site_url('otros');?>">OTROS</a></li>
+                                        </ul>
+                                    </li>
                                     <li><a href="<?=site_url('imagenes');?>">IMAGENES</a></li>
                                     <li><a href="<?=site_url('contacto');?>">Contacto</a></li>
                                 </ul>
@@ -59,6 +66,7 @@
                                     <li>
                                         <a href="#">CATALOGO</a>
                                         <ul>
+                                            <li><a href="<?=site_url('composiciones');?>">Listado de composiciones</a></li>
                                             <li><a href="<?=site_url('audios');?>">AUDIOS</a></li>
                                             <li><a href="<?=site_url('videos');?>">VIDEOS</a></li>
                                             <li><a href="<?=site_url('partituras');?>">PARTITURAS</a></li>
@@ -71,7 +79,13 @@
                                     <h1 id="logo"><a href="<?=site_url();?>"><img src="<?=site_url();?>media/img/logo.png" alt="Imagen Eduardo" /></a></h1>
                             <nav id="nav2">
                                 <ul>
-                                    <li><a href="<?=site_url('tesis');?>">TESIS</a></li>
+                                    <li>
+                                        <a href="#">TEXTOS</a>
+                                        <ul>
+                                            <li><a href="<?=site_url('tesis');?>">TESIS</a></li>
+                                            <li><a href="<?=site_url('otros');?>">OTROS</a></li>
+                                        </ul>
+                                    </li>
                                     <li><a href="<?=site_url('imagenes');?>">IMAGENES</a></li>
                                     <li><a href="<?=site_url('contacto');?>">Contacto</a></li>
                                 </ul>

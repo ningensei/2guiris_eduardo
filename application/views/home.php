@@ -1,10 +1,12 @@
 <?=$header;?>
 
-<div id="banner">
-    <div class="container">
-        <section>
-        </section>
-    </div>
+<div class="owl-carousel owl-theme">
+    
+        <img class="img-responsive" src="<?=base_url('media/img/slide-1.jpg');?>">
+    
+        <img class="img-responsive" src="<?=base_url('media/img/slide-2.jpg');?>">
+    
+        <img class="img-responsive" src="<?=site_url('media/img/slide-3.jpg');?>">
 </div>
 <!-- Featured -->
 <div id="featured">

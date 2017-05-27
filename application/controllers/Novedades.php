@@ -18,7 +18,7 @@ class Novedades extends FrontController {
      *
      * @return void
      **/    
-    public function index()
+    public function index($page = 0)
     {
         log_visita('novedades');
 
@@ -31,9 +31,13 @@ class Novedades extends FrontController {
         $this->breadcrumbs[] = array('name' => 'Novedades', 'url' => '');
         $this->data['breadcrumbs'] = renderBreadcrumbs($this->breadcrumbs);
 
-        $this->data['novedades'] = $this->model->getAll()->result();
+        $this->data['novedades'] = $this->model->getAll(6, $page)->result();
+
+        $this->data['paginador'] = $this->render_paginador(base_url('novedades/index'), $this->model->totalRows(), 6);
+
         $this->render('novedades', $this->data);
     }
+
 
     /**
      * Carga la vista de una novedad
