@@ -93,7 +93,7 @@ class AdminController extends MY_Controller {
 			
 			array(
 				"label"		=>	"novedades",
-				"name"		=>	"<i style='font-size: 20px;' class='fa fa-file-text-o' aria-hidden='true'></i> Novedades",
+				"name"		=>	"<i style='font-size: 20px;' class='fa fa-file-text-o' aria-hidden='true'></i> Miscelaneo",
 				"url"		=>	"novedades",
 			),
 

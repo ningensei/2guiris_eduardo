@@ -2142,7 +2142,7 @@
 		position: relative;
 		padding: 2em 0em;
 		background: url(../img/musica2.jpg) no-repeat;
-		background: cover;
+		background-size: cover;
 	}
 
 		#main2 header {

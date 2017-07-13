@@ -28,7 +28,7 @@ class Novedades extends FrontController {
         ];
 
         // breadcrumbs
-        $this->breadcrumbs[] = array('name' => 'Novedades', 'url' => '');
+        $this->breadcrumbs[] = array('name' => 'Miscelaneo', 'url' => '');
         $this->data['breadcrumbs'] = renderBreadcrumbs($this->breadcrumbs);
 
         $this->data['novedades'] = $this->model->getAll(6, $page)->result();
@@ -49,7 +49,7 @@ class Novedades extends FrontController {
         $novedad = $this->data['novedad'] = $this->model->get($id)->row();
         
         // breadcrumbs
-        $this->breadcrumbs[] = array('name' => 'Novedades', 'url' => site_url('novedades'));
+        $this->breadcrumbs[] = array('name' => 'Miscelaneo', 'url' => site_url('novedades'));
         $this->breadcrumbs[] = array('name' => $novedad->titulo, 'url' => '');
         $this->data['breadcrumbs'] = renderBreadcrumbs($this->breadcrumbs);
 
