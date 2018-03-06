@@ -23,7 +23,7 @@
                                 <label class="col-md-3 control-label">Texto Informativo <span class="required">*</span></label>
                                 <div class="col-md-9">
                                     <div class="input-group" style="width:100%;">
-                                        <textarea rows="8" id="texto" name="texto" class="form-control"><?php echo @$row->texto;?></textarea>
+                                        <textarea rows="8" id="texto_enriquecido" name="texto" class="form-control"><?php echo @$row->texto;?></textarea>
                                     </div>
                                 </div>
                             </div>

@@ -15,10 +15,32 @@
 <script type="text/javascript" src="<?php echo base_url()?>media/admin/assets/js/locales/bootstrap-datepicker.es.js"></script>
 <link rel="stylesheet" href="<?php echo base_url()?>media/admin/assets/css/datepicker.css" />
 <script type="text/javascript" src="<?php echo base_url()?>media/admin/assets/js/jquery.simpletip-1.3.1.min.js"></script>	
+<script type="text/javascript" src="<?php echo base_url();?>media/admin/ckeditor/ckeditor.js"></script>
 
 <script type="text/javascript">
 	$(document).ready(function(){
 		Ladda.bind( 'button[type=submit]' );
+
+
+		if ($('#texto_enriquecido').length) {
+			CKEDITOR.config.enterMode = CKEDITOR.ENTER_BR;
+			CKEDITOR.config.extraPlugins = 'mediaembed';
+			CKEDITOR.config.filebrowserImageUploadUrl = "<?=base_url();?>"+'/admin/uploader';
+			CKEDITOR.config.extraAllowedContent = 'blockquote[*](*)';
+			CKEDITOR.config.height = '340px';
+			CKEDITOR.replace('texto_enriquecido', {
+				language: 'es',
+				toolbar : [
+					{ name: 'document', groups: [ 'mode'] },
+					{ name: 'insert', items: [ 'Image', 'MediaEmbed', 'Table', 'HorizontalRule', 'SpecialChar', 'PageBreak', 'Iframe' ] },
+					{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ], items: [ 'Bold', 'Italic', 'Underline', 'Strike', '-', 'RemoveFormat' ] },
+					{ name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ], items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] },
+					{ name: 'links', items: [ 'Link', 'Unlink', 'Anchor' ] },
+					{ name: 'styles', items: [ 'Format' ] },
+					{ name: 'colors', items: [ 'TextColor', 'BGColor' ] }
+				]			
+			});
+		}
 
 		var baseURL = "<?php echo base_url();?>";
 		$('.btnOpcionIdioma').click(function(e){

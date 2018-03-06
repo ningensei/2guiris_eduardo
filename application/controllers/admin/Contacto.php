@@ -8,7 +8,7 @@ class Contacto extends AdminController{
         $this->data['defaultSort'] = "id";
         $this->load->model('Contacto_model', 'Contacto');
         $this->model = $this->Contacto;
-        $this->page = "Contacto";
+        $this->page = "contacto";
         $this->data['currentModule'] = "contacto";
         $this->data['page'] = $this->page;
         $this->data['route'] = site_url('admin/' . $this->page);    

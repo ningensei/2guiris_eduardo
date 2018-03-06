@@ -18,7 +18,7 @@ class Composiciones extends FrontController {
 
         $this->data['breadcrumbs'] = renderBreadcrumbs($this->breadcrumbs);
         
-        $this->data['composiciones'] = $this->model->getAll($num=100000, $offset=0, $sort='', $type='ASC')->result();
+        $this->data['composiciones'] = $this->model->getAll($num=100000, $offset=0, $sort='ano', $type='ASC')->result();
         $this->render('composiciones', $this->data);
     }
 }

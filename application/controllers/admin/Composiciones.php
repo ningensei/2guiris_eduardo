@@ -14,6 +14,9 @@ class Composiciones extends AdminController{
         $this->data['route'] = site_url('admin/' . $this->page);    
         $this->pageSegment = 5;
         $this->data['page_title'] = "Composiciones";
+        $this->data['sort'] = "ano";
+        $this->data['sortType'] = "ano";
+
         $this->limit = 50;
         $this->init();
         $this->validate = FALSE;

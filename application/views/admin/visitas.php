@@ -61,7 +61,6 @@
                     <div class="value">
                         <?=$total_sesiones;?>
                     </div>
-                    <a class="more" href="http://escueladenegocios.coca-cola.com/admin/stats_usuarios">Ver Más <i class="pull-right icon-angle-right"></i></a>
                 </div>
             </div> <!-- /.smallstat -->
         </div>
@@ -75,7 +74,6 @@
                     <div class="value">
                         <?=$total_visitas;?>
                     </div>
-                    <a class="more" href="http://escueladenegocios.coca-cola.com/admin/stats_usuarios">Ver Más <i class="pull-right icon-angle-right"></i></a>
                 </div>
             </div> <!-- /.smallstat -->
         </div>
@@ -89,7 +87,6 @@
                     <div class="value">
                         <?=$total_home;?>
                     </div>
-                    <a class="more" href="http://escueladenegocios.coca-cola.com/admin/stats_usuarios">Ver Más <i class="pull-right icon-angle-right"></i></a>
                 </div>
             </div> <!-- /.smallstat -->
         </div>
@@ -103,7 +100,6 @@
                     <div class="value">
                         <?=$total_biografia;?>
                     </div>
-                    <a class="more" href="http://escueladenegocios.coca-cola.com/admin/stats_usuarios">Ver Más <i class="pull-right icon-angle-right"></i></a>
                 </div>
             </div> <!-- /.smallstat -->
         </div>
@@ -119,7 +115,6 @@
                     <div class="value">
                         <?=$total_novedades;?>
                     </div>
-                    <a class="more" href="http://escueladenegocios.coca-cola.com/admin/stats_usuarios">Ver Más <i class="pull-right icon-angle-right"></i></a>
                 </div>
             </div> <!-- /.smallstat -->
         </div>
@@ -134,7 +129,6 @@
                     <div class="value">
                         <?=$total_tesis;?>
                     </div>
-                    <a class="more" href="http://escueladenegocios.coca-cola.com/admin/stats_usuarios">Ver Más <i class="pull-right icon-angle-right"></i></a>
                 </div>
             </div> <!-- /.smallstat -->
         </div>
@@ -148,7 +142,6 @@
                     <div class="value">
                         <?=$total_imagenes;?>
                     </div>
-                    <a class="more" href="http://escueladenegocios.coca-cola.com/admin/stats_usuarios">Ver Más <i class="pull-right icon-angle-right"></i></a>
                 </div>
             </div> <!-- /.smallstat -->
         </div>
@@ -162,7 +155,6 @@
                     <div class="value">
                         <?=$total_audios;?>
                     </div>
-                    <a class="more" href="http://escueladenegocios.coca-cola.com/admin/stats_usuarios">Ver Más <i class="pull-right icon-angle-right"></i></a>
                 </div>
             </div> <!-- /.smallstat -->
         </div>
@@ -176,12 +168,9 @@
                     <div class="value">
                         <?=$total_videos;?>
                     </div>
-                    <a class="more" href="http://escueladenegocios.coca-cola.com/admin/stats_usuarios">Ver Más <i class="pull-right icon-angle-right"></i></a>
                 </div>
             </div> <!-- /.smallstat -->
         </div>
-    </div>
-    <div class="row">
         <div class="col-sm-6 col-md-3">
             <div class="statbox widget box box-shadow">
                 <div class="widget-content">
@@ -192,7 +181,6 @@
                     <div class="value">
                         <?=$total_partituras;?>
                     </div>
-                    <a class="more" href="http://escueladenegocios.coca-cola.com/admin/stats_usuarios">Ver Más <i class="pull-right icon-angle-right"></i></a>
                 </div>
             </div> <!-- /.smallstat -->
         </div>
@@ -206,7 +194,6 @@
                     <div class="value">
                         <?=$total_contacto;?>
                     </div>
-                    <a class="more" href="http://escueladenegocios.coca-cola.com/admin/stats_usuarios">Ver Más <i class="pull-right icon-angle-right"></i></a>
                 </div>
             </div> <!-- /.smallstat -->
         </div>
