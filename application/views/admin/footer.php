@@ -22,24 +22,30 @@
 		Ladda.bind( 'button[type=submit]' );
 
 
+
 		if ($('#texto_enriquecido').length) {
-			CKEDITOR.config.enterMode = CKEDITOR.ENTER_BR;
-			CKEDITOR.config.extraPlugins = 'mediaembed';
-			CKEDITOR.config.filebrowserImageUploadUrl = "<?=base_url();?>"+'/admin/uploader';
-			CKEDITOR.config.extraAllowedContent = 'blockquote[*](*)';
-			CKEDITOR.config.height = '340px';
-			CKEDITOR.replace('texto_enriquecido', {
-				language: 'es',
-				toolbar : [
-					{ name: 'document', groups: [ 'mode'] },
-					{ name: 'insert', items: [ 'Image', 'MediaEmbed', 'Table', 'HorizontalRule', 'SpecialChar', 'PageBreak', 'Iframe' ] },
-					{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ], items: [ 'Bold', 'Italic', 'Underline', 'Strike', '-', 'RemoveFormat' ] },
-					{ name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ], items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock' ] },
-					{ name: 'links', items: [ 'Link', 'Unlink', 'Anchor' ] },
-					{ name: 'styles', items: [ 'Format' ] },
-					{ name: 'colors', items: [ 'TextColor', 'BGColor' ] }
-				]			
-			});
+			CKEDITOR.editorConfig = function( config ) {
+				config.toolbarGroups = [
+					{ name: 'clipboard', groups: [ 'clipboard', 'undo' ] },
+					{ name: 'editing', groups: [ 'find', 'selection', 'spellchecker', 'editing' ] },
+					{ name: 'links', groups: [ 'links' ] },
+					{ name: 'insert', groups: [ 'insert' ] },
+					{ name: 'forms', groups: [ 'forms' ] },
+					{ name: 'tools', groups: [ 'tools' ] },
+					{ name: 'document', groups: [ 'mode', 'document', 'doctools' ] },
+					{ name: 'others', groups: [ 'others' ] },
+					'/',
+					{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
+					{ name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi', 'paragraph' ] },
+					{ name: 'styles', groups: [ 'styles' ] },
+					{ name: 'colors', groups: [ 'colors' ] },
+					{ name: 'about', groups: [ 'about' ] }
+				];
+
+				config.removeButtons = 'Underline,Subscript,Superscript';
+			};
+			
+			CKEDITOR.replace('texto_enriquecido');
 		}
 
 		var baseURL = "<?php echo base_url();?>";
