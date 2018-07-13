@@ -1845,11 +1845,11 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		text-align: center;
 		height: 3em;
 		line-height: 3em;
 		margin-top:-5%;
 		*/
+		text-align: center;
 		width: 23%;
 		display: inline-block;
 	}
