@@ -23,7 +23,7 @@ class Admin_model extends MY_Model {
 				}
 				else {
 					$data = array('intentos' => $admin->intentos + 1);
-					if ($data['intentos'] > 4) $data['activo'] = 0;
+					// if ($data['intentos'] > 4) $data['activo'] = 0;
 
 					$this->db->where('id', $admin->id);
 					$this->db->update($this->table, $data);

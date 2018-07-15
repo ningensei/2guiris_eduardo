@@ -80,8 +80,8 @@ class Login extends CI_Controller{
 			$password = random_string('alnum', 8);
 			$this->Admin->update($user->id, array('password' => md5($password), 'cambio_password' => 1));
 
-			$mensaje = "<p>Sus nuevos datos de acceso a la plataforma de administración de FUNDACION AVON son:<br/><br/><strong>Usuario:</strong> ".$user->usuario."<br/><strong>Contraseña:</strong> ".$password."<br/></p><p>Ingrese ahora <a href='".site_url('admin')."'>haciendo click aquí</a>.</p>";
-			enviarMail('noreply@fundacionavon.org.ar', $_POST['email'], $bcc='', 'Datos de acceso a su panel de FUNDACION AVON', $mensaje, 'FUNDACION AVON');
+			$mensaje = "<p>Sus nuevos datos de acceso a la plataforma de administración de EDUARDO KUSNIR son:<br/><br/><strong>Usuario:</strong> ".$user->usuario."<br/><strong>Contraseña:</strong> ".$password."<br/></p><p>Ingrese ahora <a href='".site_url('admin')."'>haciendo click aquí</a>.</p>";
+			enviarMail('noreply@fundacionavon.org.ar', $_POST['email'], $bcc='', 'Datos de acceso a su panel de FUNDACION AVON', $mensaje, 'EDUARDO KUSNIR');
 
 			redirect(site_url('admin/login/?recovered=1'));
 		}
