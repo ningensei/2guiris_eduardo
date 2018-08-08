@@ -50,7 +50,6 @@
     
     $(document).ready(function(){
         //CKEDITOR.config.extraPlugins = 'lineutils,widget,oembed,tabbedimagebrowser,mediaembed';
-        CKEDITOR.config.extraPlugins = 'mediaembed';
         CKEDITOR.config.filebrowserImageUploadUrl = 'http://escueladenegocios.coca-cola.com/admin/uploader';
         CKEDITOR.config.extraAllowedContent = 'blockquote[*](*)';
         CKEDITOR.config.height = '340px';

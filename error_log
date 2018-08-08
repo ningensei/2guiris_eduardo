@@ -1,0 +1,5 @@
+[15-Jul-2018 15:56:20 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function mysql_connect() in /home/eduardok/public_html/phpminiadmin.php:502
+Stack trace:
+#0 /home/eduardok/public_html/phpminiadmin.php(96): db_connect('nodie')
+#1 {main}
+  thrown in /home/eduardok/public_html/phpminiadmin.php on line 502
